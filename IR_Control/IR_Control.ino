@@ -1,4 +1,5 @@
 /*
+ * Based on:
   Multimedia IR Remote for PC
   10.03.2016 Pawel A. Hernik
   Code for the video:
@@ -35,17 +36,6 @@
 
 #define WIN_R 0
 #define STRING 1
-
-#define MOUSE_LEFT 1
-#define MOUSE_RIGHT 2
-#define MOUSE_UP 3
-#define MOUSE_DOWN 4
-#define MOUSE_LMB 5
-#define MOUSE_RMB 6
-#define MOUSE_MMB 7
-#define MOUSE_WHUP 8
-#define MOUSE_WHDN 9
-
 
 typedef struct
 {
