@@ -52,67 +52,15 @@ typedef struct
 
 const PROGMEM Action actions[] =
 {
-  {IR_POWER,  KEY,  KEYCODE_F4, ALT},
-  {IR_STOP,   KEY,  KEYCODE_ESC},
-  {IR_PLAY,   KEY,  KEYCODE_SPACE},
-
-  {IR_SKIP,   KEY,  KEYCODE_TAB},
-  {IR_REPL,   KEY,  KEYCODE_TAB, CTRL},
-  {IR_DVD,    KEY,  KEYCODE_TAB, ALT},
-  {IR_LIVE,   KEY,  KEYCODE_TAB, SHIFT},
-  {IR_GUIDE,  KEY,  KEYCODE_TAB, WIN},
-
-  {IR_REW,    KEY,  KEYCODE_ARROW_LEFT},
-  {IR_FWD,    KEY,  KEYCODE_ARROW_RIGHT},
-  {IR_PGUP,   KEY,  KEYCODE_ARROW_UP},
-  {IR_PGDN,   KEY,  KEYCODE_ARROW_DOWN},
-  {IR_WIN,    KEY,  KEYCODE_ENTER},
-
-  {IR_1,      KEY,  KEYCODE_Q},
-  {IR_2,      KEY,  KEYCODE_W},
-  {IR_3,      KEY,  KEYCODE_E},
-  {IR_4,      KEY,  KEYCODE_A},
-  {IR_5,      KEY,  KEYCODE_S},
-  {IR_6,      KEY,  KEYCODE_D},
-  {IR_7,      KEY,  KEYCODE_Z},
-  {IR_8,      KEY,  KEYCODE_X},
-  {IR_9,      KEY,  KEYCODE_C},
-
-  {IR_CLEAR,  KEY,  KEYCODE_F10},
-  {IR_ENTER,  COMMAND, 0, WIN_R},
-  
-  {IR_0,      COMMAND, 1, STRING},
-  {IR_STAR,   COMMAND, 2, STRING},
-  {IR_HASH,   COMMAND, 3, WIN_R},
-  {IR_REC,    COMMAND, 4, STRING},
-
-  {IR_LEFT,   MOUSE,  -1, 0},
-  {IR_RIGHT,  MOUSE,  1, 0},
-  {IR_UP,     MOUSE,  0, -1},
-  {IR_DOWN,   MOUSE,  0, 1},
-  {IR_OK,     BUTTON, MOUSEBTN_LEFT_MASK},
-  {IR_INFO,   BUTTON, MOUSEBTN_RIGHT_MASK},
-  
-  {IR_BACK,   BUTTON, MOUSEBTN_MIDDLE_MASK},
-
-  {IR_MUTE,  MMKEY, MMKEY_MUTE},
-//  {IR_VOLUP, MMKEY, MMKEY_VOL_UP},
-//  {IR_VOLDN, MMKEY, MMKEY_VOL_DOWN},
-
-  {IR_TV,    KEY, KEYCODE_BACKSLASH,  ALT+CTRL},  //program: volume2, change output device
-  {IR_VOLUP, KEY, KEYCODE_EQUAL,      ALT+CTRL},  //program: volume2, volume up
-  {IR_VOLDN, KEY, KEYCODE_MINUS,      ALT+CTRL},  //program: volume2, volume down
-  
-  {IR_PAUSE, MMKEY, MMKEY_PLAYPAUSE},
-
+  #include "my_actions.h"
 };
 #define ACTIONS_TOTAL (sizeof(actions)/sizeof(Action))
 
-const char command0[] PROGMEM = "far";
-const char command1[] PROGMEM = "far";
-const char command2[] PROGMEM = "exit";
-const char command3[] PROGMEM = "cmd";
-const char command4[] PROGMEM = "far";
+const char command0[] PROGMEM = COMMAND0;
+const char command1[] PROGMEM = COMMAND1;
+const char command2[] PROGMEM = COMMAND2;
+const char command3[] PROGMEM = COMMAND3;
+const char command4[] PROGMEM = COMMAND4;
 const char *const commands[] PROGMEM = {
   command0, command1, command2, command3, command4,
 };
